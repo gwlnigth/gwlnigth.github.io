@@ -1,0 +1,15 @@
+#footer {
+    background: transparent;
+}
+#page-header {
+    background-color: #fca502;
+}
+
+.aplayer {
+
+    opacity:0.9;
+}
+
+#page-header.not-home-page {
+    height: 30rem;
+}
