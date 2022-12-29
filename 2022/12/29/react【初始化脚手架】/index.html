@@ -1,0 +1,498 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>React初始化脚手架 | Start</title><meta name="keywords" content="react React 初始化脚手架"><meta name="author" content="Mrs.G"><meta name="copyright" content="Mrs.G"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="10 【初始化脚手架】1.什么是 React 脚手架？在我们的现实生活中，脚手架最常用的使用场景是在工地，它是为了保证施工顺利的、方便的进行而搭建的，在工地上搭建的脚手架可以帮助工人们高校的去完成工作，同时在大楼建设完成后，拆除脚手架并不会有任何的影响。 在我们的 React 项目中，脚手架的作用与之有异曲同工之妙 React 脚手架其实是一个工具帮我们快速的生成项目的工程化结构，每个项目的结构其">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React初始化脚手架">
+<meta property="og:url" content="https://gwlnigth.github.io/2022/12/29/react%E3%80%90%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%91/index.html">
+<meta property="og:site_name" content="Start">
+<meta property="og:description" content="10 【初始化脚手架】1.什么是 React 脚手架？在我们的现实生活中，脚手架最常用的使用场景是在工地，它是为了保证施工顺利的、方便的进行而搭建的，在工地上搭建的脚手架可以帮助工人们高校的去完成工作，同时在大楼建设完成后，拆除脚手架并不会有任何的影响。 在我们的 React 项目中，脚手架的作用与之有异曲同工之妙 React 脚手架其实是一个工具帮我们快速的生成项目的工程化结构，每个项目的结构其">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://w.wallhaven.cc/full/wq/wallhaven-wqdlq7.jpg">
+<meta property="article:published_time" content="2022-12-29T11:19:53.291Z">
+<meta property="article:modified_time" content="2022-12-29T11:17:32.553Z">
+<meta property="article:author" content="Mrs.G">
+<meta property="article:tag" content="React">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/wq/wallhaven-wqdlq7.jpg"><link rel="shortcut icon" href="https://gitee.com/airgwl/upic/raw/master//img/favicon.png"><link rel="canonical" href="https://gwlnigth.github.io/2022/12/29/react%E3%80%90%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%91/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":1,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'React初始化脚手架',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-29 19:17:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="/css/style.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/gwlnigth/upic/main/img/myher.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gulugulu/"><i class="fa-fw fas fa-link"></i><span> 叽里呱啦</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://w.wallhaven.cc/full/wq/wallhaven-wqdlq7.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Start</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/gulugulu/"><i class="fa-fw fas fa-link"></i><span> 叽里呱啦</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">React初始化脚手架</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-29T11:19:53.291Z" title="发表于 2022-12-29 19:19:53">2022-12-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-29T11:17:32.553Z" title="更新于 2022-12-29 19:17:32">2022-12-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="React初始化脚手架"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="10-【初始化脚手架】"><a href="#10-【初始化脚手架】" class="headerlink" title="10 【初始化脚手架】"></a>10 【初始化脚手架】</h1><h2 id="1-什么是-React-脚手架？"><a href="#1-什么是-React-脚手架？" class="headerlink" title="1.什么是 React 脚手架？"></a>1.什么是 React 脚手架？</h2><p>在我们的现实生活中，脚手架最常用的使用场景是在工地，它是为了保证施工顺利的、方便的进行而搭建的，在工地上搭建的脚手架可以帮助工人们高校的去完成工作，同时在大楼建设完成后，拆除脚手架并不会有任何的影响。</p>
+<p>在我们的 React 项目中，脚手架的作用与之有异曲同工之妙</p>
+<p>React 脚手架其实是一个工具帮我们快速的生成项目的工程化结构，每个项目的结构其实大致都是相同的，所以 React 给我提前的搭建好了，这也是脚手架强大之处之一，也是用 React 创建 SPA 应用的最佳方式</p>
+<h2 id="2-为什么要用脚手架？"><a href="#2-为什么要用脚手架？" class="headerlink" title="2.为什么要用脚手架？"></a>2.为什么要用脚手架？</h2><p>在前面的介绍中，我们也有了一定的认知，脚手架可以帮助我们快速的搭建一个项目结构</p>
+<p>在我之前学习 <code>webpack</code> 的过程中，每次都需要配置 <code>webpack.config.js</code> 文件，用于配置我们项目的相关 <code>loader</code> 、<code>plugin</code>，这些操作比较复杂，但是它的重复性很高，而且在项目打包时又很有必要，那 React 脚手架就帮助我们做了这些，它不需要我们人为的去编写 <code>webpack</code> 配置文件，它将这些配置文件全部都已经提前的配置好了。</p>
+<h2 id="3-怎么用-React-脚手架？"><a href="#3-怎么用-React-脚手架？" class="headerlink" title="3.怎么用 React 脚手架？"></a>3.怎么用 React 脚手架？</h2><p>这也是这篇文章的重点，如何去安装 React 脚手架，并且理解它其中的相关文件作用</p>
+<p>首先介绍如何安装脚手架</p>
+<h3 id="3-1-安装-React-脚手架"><a href="#3-1-安装-React-脚手架" class="headerlink" title="3.1 安装 React 脚手架"></a>3.1 安装 React 脚手架</h3><p>首先确保安装了 <code>npm</code> 和<code>Node</code>，版本不要太古老，具体是多少不大清楚，建议还是用 <code>npm update</code> 更新一下</p>
+<p>然后打开 cmd 命令行工具，全局安装 <code>create-react-app</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i create-react-app -g</span><br></pre></td></tr></table></figure>
+
+<p>然后可以<strong>新建</strong>一个文件夹用于存放项目</p>
+<p>在当前的文件夹下执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app hello-react</span><br></pre></td></tr></table></figure>
+
+<p><strong>快速搭建项目</strong></p>
+<p>再在生成好的 <code>hello-react</code> 文件夹中执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<p><strong>启动项目</strong></p>
+<p>接下来我们看看这些文件都有什么作用</p>
+<h3 id="3-2-使用vite创建react项目"><a href="#3-2-使用vite创建react项目" class="headerlink" title="3.2 使用vite创建react项目"></a>3.2 使用vite创建react项目</h3><p>vite官网：<a target="_blank" rel="noopener" href="https://vitejs.cn/">https://vitejs.cn</a></p>
+<ul>
+<li>什么是vite？—— 新一代前端构建工具。</li>
+<li>优势如下：<ul>
+<li>开发环境中，无需打包操作，可快速的冷启动。</li>
+<li>轻量快速的热重载（HMR）。</li>
+<li>真正的按需编译，不再等待整个应用编译完成。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 创建工程</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># npm 6.x</span></span><br><span class="line">$ npm init vite@latest &lt;project-name&gt; --template react  </span><br><span class="line"><span class="comment">## 如： npm init vite@latest react-app --template react</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># npm 7+，需要加上额外的双短横线</span></span><br><span class="line">$ npm init vite@latest &lt;project-name&gt; --template react</span><br><span class="line"></span><br><span class="line"><span class="comment">## 使用 PNPM:</span></span><br><span class="line">pnpm create vite &lt;project-name&gt; --template react</span><br><span class="line"><span class="comment"># pnpm create vite react-app -- --template react</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 进入工程目录</span></span><br><span class="line"><span class="built_in">cd</span> &lt;project-name&gt;</span><br><span class="line"><span class="comment">## 安装依赖</span></span><br><span class="line">pnpm install</span><br><span class="line"><span class="comment">## 运行</span></span><br><span class="line">pnpm run dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-脚手架项目结构"><a href="#3-3-脚手架项目结构" class="headerlink" title="3.3 脚手架项目结构"></a>3.3 脚手架项目结构</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">hello-react</span><br><span class="line">├─ <span class="selector-class">.gitignore</span>               // 自动创建本地仓库</span><br><span class="line">├─ package<span class="selector-class">.json</span>             // 相关配置文件</span><br><span class="line">├─ public                   // 公共资源</span><br><span class="line">│  ├─ favicon<span class="selector-class">.ico</span>           // 浏览器顶部的<span class="attribute">icon</span>图标</span><br><span class="line">│  ├─ index<span class="selector-class">.html</span>            // 应用的 index<span class="selector-class">.html</span>入口</span><br><span class="line">│  ├─ logo192<span class="selector-class">.png</span>           // 在 manifest 中使用的logo图</span><br><span class="line">│  ├─ logo512<span class="selector-class">.png</span>           // 同上</span><br><span class="line">│  ├─ manifest<span class="selector-class">.json</span>         // 应用加壳的配置文件</span><br><span class="line">│  └─ robots<span class="selector-class">.txt</span>            // 爬虫给协议文件</span><br><span class="line">├─ <span class="attribute">src</span>                      // 源码文件夹</span><br><span class="line">│  ├─ App<span class="selector-class">.css</span>               // App组件的样式</span><br><span class="line">│  ├─ App<span class="selector-class">.js</span>                // App组件</span><br><span class="line">│  ├─ App<span class="selector-class">.test</span><span class="selector-class">.js</span>           // 用于给APP做测试</span><br><span class="line">│  ├─ index<span class="selector-class">.css</span>             // 样式</span><br><span class="line">│  ├─ index<span class="selector-class">.js</span>              // 入口文件</span><br><span class="line">│  ├─ logo<span class="selector-class">.svg</span>              // logo图</span><br><span class="line">│  ├─ reportWebVitals<span class="selector-class">.js</span>    // 页面性能分析文件</span><br><span class="line">│  └─ setupTests<span class="selector-class">.js</span>         // 组件单元测试文件</span><br><span class="line">└─ yarn<span class="selector-class">.lock</span></span><br></pre></td></tr></table></figure>
+
+<p>再介绍一下public目录下的 <code>index.html</code> 文件中的代码意思</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;%PUBLIC_URL%/favicon.ico&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;theme-color&quot;</span> <span class="attr">content</span>=<span class="string">&quot;#000000&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">&quot;description&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">&quot;Web site created using create-react-app&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;apple-touch-icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;%PUBLIC_URL%/logo192.png&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;manifest&quot;</span> <span class="attr">href</span>=<span class="string">&quot;%PUBLIC_URL%/manifest.json&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>React App<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">noscript</span>&gt;</span>You need to enable JavaScript to run this app.<span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;root&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上是删除代码注释后的全部代码</p>
+<p><strong>第5行</strong></p>
+<p>指定浏览器图标的路径，这里直接采用 <code>%PUBLIC_URL%</code> 原因是 <code>webpack</code> 配置好了，它代表的意思就是 <code>public</code> 文件夹</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;%PUBLIC_URL%/favicon.ico&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>第6行</strong></p>
+<p>用于做移动端网页适配</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>第七行</strong></p>
+<p>用于配置安卓手机浏览器顶部颜色，兼容性不大好</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;theme-color&quot;</span> <span class="attr">content</span>=<span class="string">&quot;#000000&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>8到11行</strong></p>
+<p>用于描述网站信息</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">	<span class="attr">name</span>=<span class="string">&quot;description&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">content</span>=<span class="string">&quot;Web site created using create-react-app&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>第12行</strong></p>
+<p>苹果手机触摸版应用图标</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;apple-touch-icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;%PUBLIC_URL%/logo192.png&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>第13行</strong></p>
+<p>应用加壳时的配置文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;manifest&quot;</span> <span class="attr">href</span>=<span class="string">&quot;%PUBLIC_URL%/manifest.json&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>这里面其实最主要的就是App.js以及index.js，一个是组件，一个是将组件渲染到页面中的。</strong></p>
+<h2 id="4-第一个脚手架应用"><a href="#4-第一个脚手架应用" class="headerlink" title="4.第一个脚手架应用"></a>4.第一个脚手架应用</h2><ol>
+<li><p>我们保持public中的Index.html不变</p>
+</li>
+<li><p>修改src下面的APP.js以及index.js文件</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建外壳组件APP</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">render</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello word<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App</span><br></pre></td></tr></table></figure>
+
+<p><code>index.js</code>: 【主要的作用其实就是将App这个组件渲染到页面上】</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入核心库</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">&#x27;react-dom&#x27;</span></span><br><span class="line"><span class="comment">//引入组件</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"></span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>,<span class="built_in">document</span>.getElementById(<span class="string">&quot;root&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>这样在重新启动应用，就成功了。</p>
+<p><img src="https://i0.hdslb.com/bfs/album/259950b834509b96012d9e30c1b63c2d9f3b6e63.png" alt="image-20221025142625901"></p>
+<p>我们也不建议这样直接将内容放入App组件中，尽量还是用内部组件。</p>
+<p>我们在顶一个Hello组件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;Componet&#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">Componet</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在App组件中，进行使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;Componet&#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Hello form <span class="string">&#x27;./Hello&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">render</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">Hello</span> /&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样的结果和前面是一样的。</p>
+<p>推荐使用这种目录结构去使用组件</p>
+<p><img src="https://i0.hdslb.com/bfs/album/6d23ae1393d60c7598fa0f9172061b98051a8f8e.png" alt="image-20221025142952888"></p>
+<h2 id="5-组件"><a href="#5-组件" class="headerlink" title="5.组件"></a>5.组件</h2><h3 id="5-1-组件基本概念"><a href="#5-1-组件基本概念" class="headerlink" title="5.1 组件基本概念"></a>5.1 组件基本概念</h3><p>在React中网页被拆分为了一个一个组件，组件是独立可复用的代码片段。具体来说，组件可能是页面中的一个按钮，一个对话框，一个弹出层等。React中定义组件的方式有两种：基于函数的组件和基于类的组件。本节我们先看看基于函数的组件。</p>
+<p>基于函数的组件其实就是一个会返回JSX（React元素）的普通的JS函数，你可以这样定义：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">&quot;react-dom/client&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这就是一个组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一个React的组件！<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = ReactDOM.createRoot(<span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line">root.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span>/&gt;</span></span>);</span><br></pre></td></tr></table></figure>
+
+<p>函数式组件主要有两个注意点：</p>
+<ol>
+<li>函数名首字母大写</li>
+<li>返回值是一个JSX（React元素）</li>
+</ol>
+<p>为了使得项目结构更加的清晰，更易于维护，每个组件通常会存储到一个单独的文件中，比如上例中的App组件，可以存储到App.js中，并通过export导出。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">App.js</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一个React的组件！<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+
+<p>或者使用箭头函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> App = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一个React的组件！<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+
+<p>在其他文件中使用时，需要先通过import进行引入：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">index.js</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">&quot;react-dom/client&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&quot;./App&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = ReactDOM.createRoot(<span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>));</span><br><span class="line">root.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span>/&gt;</span></span>);</span><br></pre></td></tr></table></figure>
+
+<p>引入后通过<code>&lt;组件名/&gt;</code>或<code>&lt;组件名&gt;&lt;/组件名&gt;</code>即可引入组件。</p>
+<h3 id="5-2-组件化编码流程"><a href="#5-2-组件化编码流程" class="headerlink" title="5.2 组件化编码流程"></a>5.2 组件化编码流程</h3><p>1.拆分组件:拆分界面，抽取组件</p>
+<p>2.实现静态组件</p>
+<p>3.实现动态组件</p>
+<ul>
+<li>动态的显示初始化数据<ul>
+<li>数据类型</li>
+<li>数据名称</li>
+<li>保存在哪个组件</li>
+</ul>
+</li>
+<li>交互</li>
+</ul>
+<p><strong>注意事项：</strong></p>
+<p>1.拆分组件、实现静态组件。注意className、style的写法</p>
+<p>2.动态初始化列表，如何确定将数据放在哪个组件的state中？</p>
+<ul>
+<li>某个组件使用：放在自身的state中</li>
+<li>某些组件使用：放在他们共同的父组件中【状态提升】</li>
+</ul>
+<p>3.关于父子组件之间的通信</p>
+<ul>
+<li>父组件给子组件传递数据：通过props传递</li>
+<li>子组件给父组件传递数据：通过props传递，要求父组件提前给子组件传递一个函数</li>
+</ul>
+<p>4.注意defaultChecked 和checked区别，defalutChecked只是在初始化的时候执行一次，checked没有这个限制，但是必须添加onChange方法类似的还有：defaultValue 和value</p>
+<p>5.状态在哪里，操作状态的方法就在哪里</p>
+<h2 id="6-CSS样式"><a href="#6-CSS样式" class="headerlink" title="6.CSS样式"></a>6.CSS样式</h2><h3 id="6-1-内联样式"><a href="#6-1-内联样式" class="headerlink" title="6.1 内联样式"></a>6.1 内联样式</h3><p>在React中可以直接通过标签的style属性来为元素设置样式。style属性需要的是一个对象作为值，来为元素设置样式。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&#123;&#123;<span class="attr">color</span>:<span class="string">&#x27;red&#x27;</span>&#125;&#125;&gt;</span><br><span class="line">    我是Div</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>传递样式时，需要注意如果样式名不符合驼峰命名法，需要将其修改为符合驼峰命名法的名字。比如：background-color改为backgroundColor。</p>
+<p>如果内联样式编写过多，会导致JSX变得异常混乱，此时也可以将样式对象定义到JSX外，然后通过变量引入。</p>
+<p>样式过多，JSX会比较混乱：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> StyleDemo = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;&#123;color:</span>&#x27;<span class="attr">red</span>&#x27;, <span class="attr">backgroundColor:</span>&#x27;#<span class="attr">bfa</span>&#x27;, <span class="attr">fontSize:20</span>, <span class="attr">borderRadius:12</span>&#125;&#125;&gt;</span></span></span><br><span class="line"><span class="xml">            我是Div</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> StyleDemo;</span><br></pre></td></tr></table></figure>
+
+<p>可以这样修改：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;;</span><br><span class="line"></span><br><span class="line">const StyleDemo = () =&gt; &#123;</span><br><span class="line">    const divStyle = &#123;color: &#x27;red&#x27;, backgroundColor: &#x27;#bfa&#x27;, fontSize: 20, borderRadius: 12&#125;</span><br><span class="line"></span><br><span class="line">    return (</span><br><span class="line">        &lt;div style=&#123;divStyle&#125;&gt;</span><br><span class="line">            我是Div</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default StyleDemo;</span><br></pre></td></tr></table></figure>
+
+<p>相比第一段代码来说，第二段代码中JSX结构更加简洁。</p>
+<h3 id="6-2-在内联样式中使用State"><a href="#6-2-在内联样式中使用State" class="headerlink" title="6.2 在内联样式中使用State"></a>6.2 在内联样式中使用State</h3><p>设置样式时，可以根据不同的state值应用不同的样式，比如我们可以在组件中添加一个按钮，并希望通过点击按钮可以切换div的边框，代码可以这样写：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123;useState&#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> StyleDemo = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> [showBorder, setShowBorder] = useState(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> divStyle = &#123;</span><br><span class="line">        <span class="attr">color</span>: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">        <span class="attr">backgroundColor</span>: <span class="string">&#x27;#bfa&#x27;</span>,</span><br><span class="line">        <span class="attr">fontSize</span>: <span class="number">20</span>,</span><br><span class="line">        <span class="attr">borderRadius</span>: <span class="number">12</span>,</span><br><span class="line">        <span class="attr">border</span>: showBorder?<span class="string">&#x27;2px red solid&#x27;</span>:<span class="string">&#x27;none&#x27;</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> toggleBorderHandler = <span class="function">()=&gt;</span> &#123;</span><br><span class="line">      setShowBorder(<span class="function"><span class="params">prevState</span> =&gt;</span> !prevState);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&#123;divStyle&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">            我是Div</span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;toggleBorderHandler&#125;</span>&gt;</span>切换边框<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> StyleDemo;</span><br></pre></td></tr></table></figure>
+
+<p>上例中添加一个新的state，命名为showBorder，代码是这样的<code>const [showBorder, setShowBorder] = useState(false);</code>当该值为true时，我们希望div可以显示一条2像素的红色边框，当为false时，我们希望div没有边框。默认值为false。</p>
+<p>divStyle的最后一个属性是这样设置的<code>border: showBorder?&#39;2px red solid&#39;:&#39;none&#39;</code>，这里我们根据showBorder的值来设置border样式的值，如果值为true，则设置边框，否则边框设置为none。</p>
+<p><code>toggleBorderHandler</code> 是负责修改showBorder的响应函数，当我们点击按钮后函数会对showBorder进行取反，这样我们的样式就可以根据state的不同值而呈现出不同的效果了。</p>
+<h3 id="6-3-外部样式表"><a href="#6-3-外部样式表" class="headerlink" title="6.3 外部样式表"></a>6.3 外部样式表</h3><p>那么如何为React组件引入样式呢？很简单直接在组件中import即可。例如：我们打算为Button组件编写一组样式，并将其存储到Button.css中。我们只需要直接在Button.js中引入Button.css就能轻易完成样式的设置。</p>
+<p>Button.css：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#bfa</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Button.js：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./Button.css&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> Button = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>我是一个按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Button;</span><br></pre></td></tr></table></figure>
+
+<p>使用这种方式引入的样式，需要注意以下几点：</p>
+<ol>
+<li>CSS就是标准的CSS语法，各种选择器、样式、媒体查询之类正常写即可。</li>
+<li>尽量将js文件和css文件的文件名设置为相同的文件名。</li>
+<li>引入样式时直接import，无需指定名字，且引入样式必须以./或../开头。</li>
+<li>这种形式引入的样式是全局样式，有可能会被其他样式覆盖。</li>
+</ol>
+<h3 id="6-4-css模块化"><a href="#6-4-css模块化" class="headerlink" title="6.4 css模块化"></a>6.4 css模块化</h3><p>当组件逐渐增多起来的时候，我们发现，组件的样式也是越来越丰富，这样就很有可能产生两个组件中样式名称有可能会冲突，这样会根据引入App这个组件的先后顺序，后面的会覆盖前面的，</p>
+<p>为了解决这个问题React中还为我们提供了一中方式，CSS Module。</p>
+<p>我们可以将CSS Module理解为外部样式表的一种进化版，它的大部分使用方式都和外部样式表类似，不同点在于使用CSS Module后，网页中元素的类名会自动计算生成并确保唯一，所以使用CSS Module后，我们再也不用担心类名重复了</p>
+<p><strong>使用方式</strong></p>
+<p>CSS Module在React中已经默认支持了（前提是使用了react-scripts），所以无需再引入其他多余的模块。使用CSS Module时需要遵循如下几个步骤：</p>
+<p>1.将css文件名修改： <code>index.css</code> — &gt;<code> index.module.css</code></p>
+<p>2.引入并使用的时候改变方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;Component&#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> hello <span class="keyword">from</span> <span class="string">&#x27;./index.module.css&#x27;</span>  <span class="comment">//引入的时候给一个名称</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            <span class="xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&#123;hello.title&#125;</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>   <span class="comment">//通过大括号进行调用</span></span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这就是一个简单的CSS Module的案例，设置完成后你可以自己通过开发者工具查看元素的class属性，你会发现class属性和你设置的并不完全一样，这是因为CSS Module通过算法确保了每一个模块中类名的唯一性。</p>
+<p>总之，相较于标准的外部样式表来说，CSS Module就是多了一点——确保类名的唯一，通过内部算法避免了两个组件中出现重复的类名，如果你能保证不会出现重复的类名，其实直接使用外部样式表也是一样的。</p>
+<h2 id="7-配置代理"><a href="#7-配置代理" class="headerlink" title="7.配置代理"></a>7.配置代理</h2><p>本案例需要下载<code>axios</code>库<code>npm install axios</code></p>
+<p>React本身只关注与页面，并不包含发送ajax请求的代码，所以一般都是集成第三方的一些库，或者自己进行封装。</p>
+<p>推荐使用axios。</p>
+<p>在使用的过程中很有可能会出现跨域的问题，这样就应该配置代理。</p>
+<p>所谓同源（即指在同一个域）就是两个页面具有相同的协议（protocol），主机（host）和端口号（port）， 当一个请求url的<strong>协议、域名、端口</strong>三者之间任意一个与当前页面url不同即为跨域 。</p>
+<p>那么react通过代理解决跨域问题呢</p>
+<blockquote>
+<p>利用服务器之间访问不会有跨域，在中间开启一个服务器，端口号和项目端口号一样</p>
+</blockquote>
+<h3 id="7-1-方法一"><a href="#7-1-方法一" class="headerlink" title="7.1 方法一"></a>7.1 方法一</h3><blockquote>
+<p>在package.json中追加如下配置</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;proxy&quot;</span>:<span class="string">&quot;请求的地址&quot;</span>      <span class="string">&quot;proxy&quot;</span>:<span class="string">&quot;http://localhost:5000&quot;</span>  </span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ol>
+<li>优点：配置简单，前端请求资源时可以不加任何前缀。</li>
+<li>缺点：不能配置多个代理。</li>
+<li>工作方式：上述方式配置代理，当请求了3000不存在的资源时，那么该请求会转发给5000 （优先匹配前端资源）</li>
+</ol>
+<h3 id="7-2-方法二"><a href="#7-2-方法二" class="headerlink" title="7.2 方法二"></a>7.2 方法二</h3><p><strong>方法二</strong></p>
+<ol>
+<li><p>第一步：创建代理配置文件</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在<span class="attribute">src</span>下创建配置文件：<span class="attribute">src</span>/setupProxy<span class="selector-class">.js</span></span><br></pre></td></tr></table></figure></li>
+<li><p>编写setupProxy.js配置具体代理规则：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> proxy = <span class="built_in">require</span>(<span class="string">&#x27;http-proxy-middleware&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">app</span>) </span>&#123;</span><br><span class="line">  app.use(</span><br><span class="line">    proxy(<span class="string">&#x27;/api1&#x27;</span>, &#123;  <span class="comment">//api1是需要转发的请求(所有带有/api1前缀的请求都会转发给5000)</span></span><br><span class="line">      <span class="attr">target</span>: <span class="string">&#x27;http://localhost:5000&#x27;</span>, <span class="comment">//配置转发目标地址(能返回数据的服务器地址)</span></span><br><span class="line">      <span class="attr">changeOrigin</span>: <span class="literal">true</span>, <span class="comment">//控制服务器接收到的请求头中host字段的值</span></span><br><span class="line">      <span class="comment">/*</span></span><br><span class="line"><span class="comment">      	changeOrigin设置为true时，服务器收到的请求头中的host为：localhost:5000</span></span><br><span class="line"><span class="comment">      	changeOrigin设置为false时，服务器收到的请求头中的host为：localhost:3000</span></span><br><span class="line"><span class="comment">      	changeOrigin默认值为false，但我们一般将changeOrigin值设为true</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">      <span class="attr">pathRewrite</span>: &#123;<span class="string">&#x27;^/api1&#x27;</span>: <span class="string">&#x27;&#x27;</span>&#125; <span class="comment">//去除请求前缀，保证交给后台服务器的是正常请求地址(必须配置)</span></span><br><span class="line">    &#125;),</span><br><span class="line">    proxy(<span class="string">&#x27;/api2&#x27;</span>, &#123; </span><br><span class="line">      <span class="attr">target</span>: <span class="string">&#x27;http://localhost:5001&#x27;</span>,</span><br><span class="line">      <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">pathRewrite</span>: &#123;<span class="string">&#x27;^/api2&#x27;</span>: <span class="string">&#x27;&#x27;</span>&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>说明：</p>
+<ol>
+<li>优点：可以配置多个代理，可以灵活的控制请求是否走代理。</li>
+<li>缺点：配置繁琐，前端请求资源时必须加前缀。</li>
+</ol>
+<h3 id="7-3-vite配置proxy"><a href="#7-3-vite配置proxy" class="headerlink" title="7.3 vite配置proxy"></a>7.3 vite配置proxy</h3><p><code>vite.config.ts</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> react <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// https://vitejs.dev/config/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> defineConfig(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [react()],</span><br><span class="line">  <span class="attr">server</span>: &#123;</span><br><span class="line">    <span class="comment">// 是否自动打开浏览器</span></span><br><span class="line">    <span class="attr">open</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 代理</span></span><br><span class="line">    <span class="attr">proxy</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;/api&#x27;</span>: &#123;</span><br><span class="line">        <span class="attr">target</span>: <span class="string">&#x27;http://127.0.0.1:5000&#x27;</span>,</span><br><span class="line">        <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">rewrite</span>: <span class="function"><span class="params">path</span> =&gt;</span> path.replace(<span class="regexp">/^\/api/</span>, <span class="string">&#x27;&#x27;</span>),</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Mrs.G</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://gwlnigth.github.io/2022/12/29/react%E3%80%90%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%91/">https://gwlnigth.github.io/2022/12/29/react%E3%80%90%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%91/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://gwlnigth.github.io" target="_blank">Start</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/React/">React</a></div><div class="post_share"><div class="addthis_inline_share_toolbox"></div><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-615ab34ddc158b07" async="async"></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://raw.githubusercontent.com/gwlnigth/upic/main/img/weixin.png" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/gwlnigth/upic/main/img/weixin.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://raw.githubusercontent.com/gwlnigth/upic/main/img/zhifubao.png" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/gwlnigth/upic/main/img/zhifubao.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/12/29/react%E3%80%90react-router%205%E3%80%91/"><img class="prev-cover" src="https://w.wallhaven.cc/full/g7/wallhaven-g75r7d.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Reactreact-router 5</div></div></a></div><div class="next-post pull-right"><a href="/2022/12/29/react%20%E3%80%90%E7%BB%84%E5%90%88%E7%BB%84%E4%BB%B6%E3%80%91/"><img class="next-cover" src="https://w.wallhaven.cc/full/g7/wallhaven-g75r7d.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">React组合组件</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/12/08/React%E5%9F%BA%E7%A1%80/" title="React基础"><img class="cover" src="https://w.wallhaven.cc/full/wq/wallhaven-wqdlq7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-08</div><div class="title">React基础</div></div></a></div><div><a href="/2022/12/29/reactHooks/" title="ReactHooks组件"><img class="cover" src="https://w.wallhaven.cc/full/6o/wallhaven-6od3px.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">ReactHooks组件</div></div></a></div><div><a href="/2022/12/29/react%20%E3%80%90%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87%E3%80%91/" title="React状态提升"><img class="cover" src="https://w.wallhaven.cc/full/28/wallhaven-281d5y.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">React状态提升</div></div></a></div><div><a href="/2022/12/29/react%20%E3%80%90%E7%BB%84%E5%90%88%E7%BB%84%E4%BB%B6%E3%80%91/" title="React组合组件"><img class="cover" src="https://w.wallhaven.cc/full/g7/wallhaven-g75r7d.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">React组合组件</div></div></a></div><div><a href="/2022/12/29/react%20%E3%80%90%E9%9D%A2%E5%90%91%E7%BB%84%E4%BB%B6%E7%BC%96%E7%A8%8B%E3%80%91/" title="React面向组件编程"><img class="cover" src="https://w.wallhaven.cc/full/rd/wallhaven-rdpgxj.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">React面向组件编程</div></div></a></div><div><a href="/2022/12/29/react%E3%80%90Redux%20Toolkit%E3%80%91/" title="ReactRedux Toolkit"><img class="cover" src="https://w.wallhaven.cc/full/57/wallhaven-57mk71.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-29</div><div class="title">ReactRedux Toolkit</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NDQxMy8zMDg4NA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/gwlnigth/upic/main/img/myher.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Mrs.G</div><div class="author-info__description">月亮不睡你不睡,你是秃头小宝贝</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/gwlnigth"><i class="fab fa-github"></i><span>我的主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/gwlnigth" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2423414358@qq.com" target="_blank" title="QQ邮箱"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">文章正在努力更新嗷~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#10-%E3%80%90%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%91"><span class="toc-number">1.</span> <span class="toc-text">10 【初始化脚手架】</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF-React-%E8%84%9A%E6%89%8B%E6%9E%B6%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">1.什么是 React 脚手架？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E8%84%9A%E6%89%8B%E6%9E%B6%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">2.为什么要用脚手架？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%80%8E%E4%B9%88%E7%94%A8-React-%E8%84%9A%E6%89%8B%E6%9E%B6%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">3.怎么用 React 脚手架？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%AE%89%E8%A3%85-React-%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 安装 React 脚手架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BD%BF%E7%94%A8vite%E5%88%9B%E5%BB%BAreact%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 使用vite创建react项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E8%84%9A%E6%89%8B%E6%9E%B6%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 脚手架项目结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%84%9A%E6%89%8B%E6%9E%B6%E5%BA%94%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">4.第一个脚手架应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%BB%84%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">5.组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%BB%84%E4%BB%B6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 组件基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E7%BB%84%E4%BB%B6%E5%8C%96%E7%BC%96%E7%A0%81%E6%B5%81%E7%A8%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 组件化编码流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-CSS%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.6.</span> <span class="toc-text">6.CSS样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.6.1.</span> <span class="toc-text">6.1 内联样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E5%9C%A8%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E4%B8%AD%E4%BD%BF%E7%94%A8State"><span class="toc-number">1.6.2.</span> <span class="toc-text">6.2 在内联样式中使用State</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="toc-number">1.6.3.</span> <span class="toc-text">6.3 外部样式表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-css%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-number">1.6.4.</span> <span class="toc-text">6.4 css模块化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="toc-number">1.7.</span> <span class="toc-text">7.配置代理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-number">1.7.1.</span> <span class="toc-text">7.1 方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">1.7.2.</span> <span class="toc-text">7.2 方法二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-vite%E9%85%8D%E7%BD%AEproxy"><span class="toc-number">1.7.3.</span> <span class="toc-text">7.3 vite配置proxy</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/29/react%E3%80%90styled-components%E7%9A%84%E4%BD%BF%E7%94%A8%E3%80%91/" title="ReactStyled-components"><img src="https://w.wallhaven.cc/full/rd/wallhaven-rdpgxj.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ReactStyled-components"/></a><div class="content"><a class="title" href="/2022/12/29/react%E3%80%90styled-components%E7%9A%84%E4%BD%BF%E7%94%A8%E3%80%91/" title="ReactStyled-components">ReactStyled-components</a><time datetime="2022-12-29T11:19:53.341Z" title="发表于 2022-12-29 19:19:53">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/29/react%E3%80%90react%E4%B8%AD%E4%BD%BF%E7%94%A8ts%E3%80%91/" title="React中使用ts"><img src="https://w.wallhaven.cc/full/g7/wallhaven-g75r7d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="React中使用ts"/></a><div class="content"><a class="title" href="/2022/12/29/react%E3%80%90react%E4%B8%AD%E4%BD%BF%E7%94%A8ts%E3%80%91/" title="React中使用ts">React中使用ts</a><time datetime="2022-12-29T11:19:53.333Z" title="发表于 2022-12-29 19:19:53">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/29/react%E3%80%90RTK%20Query%E3%80%91/" title="ReactRTK Query"><img src="https://w.wallhaven.cc/full/g7/wallhaven-g75r7d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ReactRTK Query"/></a><div class="content"><a class="title" href="/2022/12/29/react%E3%80%90RTK%20Query%E3%80%91/" title="ReactRTK Query">ReactRTK Query</a><time datetime="2022-12-29T11:19:53.329Z" title="发表于 2022-12-29 19:19:53">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/29/react%E3%80%90Redux%20Toolkit%E3%80%91/" title="ReactRedux Toolkit"><img src="https://w.wallhaven.cc/full/57/wallhaven-57mk71.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ReactRedux Toolkit"/></a><div class="content"><a class="title" href="/2022/12/29/react%E3%80%90Redux%20Toolkit%E3%80%91/" title="ReactRedux Toolkit">ReactRedux Toolkit</a><time datetime="2022-12-29T11:19:53.324Z" title="发表于 2022-12-29 19:19:53">2022-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/29/react%E3%80%90redux%E3%80%91/" title="ReactRedux"><img src="https://w.wallhaven.cc/full/28/wallhaven-28o9ym.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ReactRedux"/></a><div class="content"><a class="title" href="/2022/12/29/react%E3%80%90redux%E3%80%91/" title="ReactRedux">ReactRedux</a><time datetime="2022-12-29T11:19:53.319Z" title="发表于 2022-12-29 19:19:53">2022-12-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Mrs.G</div><div class="footer_custom_text">中国 | 在此<br> <a href="/"><img class="icp-icon" src="https://gitee.com/airgwl/upic/raw/master/img/peicoffic.svg"><span>备案号：未知</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (true) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":200,"height":180},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
